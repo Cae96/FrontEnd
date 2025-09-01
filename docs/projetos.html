@@ -1,0 +1,64 @@
+
+<body>
+    <h1>Portfolio de Caetano</h1>
+    
+    <header>
+
+        <img src="Imagens/foto_perfil.jfif" alt="Caetano" class="minha-imagem">
+        <nav>
+            <ul>
+                <li><a href="index.html">Pagina Inicial</a></li>
+                <li><a href="sobremim.html">Sobre mim</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+        </nav>
+
+        <link rel="stylesheet" href="style.css">  
+        
+
+    </header>
+
+    <main>
+        <h2>Meus projetos</h2>
+
+        <ol>
+            <li>Meu WMS</li>
+            <li>Meu WMS - Python</li>
+            <li>Sistema bancario - Python (Bradesco DIO)</li>
+        </ol>
+
+        <table border="1">
+            <tr>
+                <th>Nome do Projeto</th>
+                <th>Ano de realização</th>
+            </tr>
+            <tr>
+                <td>Meu WMS - Python</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>Sistema do Imigrante - Portugol</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>Sistema bancario - Python (Bradesco DIO)</td>
+                <td>2025</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(err => console.error('Erro ao carregar footer:', err));
+    </script>
+  
+  </body>
+
+</body>
