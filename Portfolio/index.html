@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio de Caetano</title>
+  <link rel="stylesheet" href="style.css">  
+
+
+</head>
+
+<body>
+  <h1>Portfolio de Caetano</h1>
+
+  <header class="site-header">
+    <!-- Foto à esquerda -->
+    <img src="Imagens/foto_perfil.jfif" alt="Caetano" class="minha-imagem">
+
+    <!--Botao de selecao de menu-->
+    <!-- <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"> ☰ </button> -->
+
+    <!-- Menu à direita em lista vertical -->
+    <nav>
+      <ul>
+        <li><a href="sobremim.html">Sobre mim</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h3>Bem-vindo</h3>
+    <p>
+        Aqui você poderá descobrir um pouco sobre mim e meu trabalho!
+    </p>
+    <video src="exemplo.mp4" width="500px" height="auto" autoplay loop muted></video>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(err => console.error('Erro ao carregar footer:', err));
+  </script>
+
+</body>
+
+
+</html>
